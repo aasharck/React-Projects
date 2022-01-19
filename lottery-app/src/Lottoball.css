@@ -1,0 +1,14 @@
+.Lottoball{
+    background-color: cornflowerblue;
+    border-radius: 50%;
+    width:3em;
+    height: 2.25em;
+    color: white;
+    display: inline-block;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-top: 0.75em;
+    margin-right: 0.5em;
+    margin-top: 2em;
+    text-align:center;
+}

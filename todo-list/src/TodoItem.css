@@ -1,0 +1,16 @@
+.completed{
+    color: lightgray;
+    text-decoration: line-through;
+}
+
+.todos li{
+    background: #423a6f;
+  }
+
+.button{
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+    margin: 2px;
+  }
