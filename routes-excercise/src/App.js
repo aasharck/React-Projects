@@ -1,51 +1,67 @@
-import { React, Component } from 'react';
-import './App.css';
-import Navbar from './Navbar';
+import { React, Component } from "react";
+import { Route, Routes } from "react-router-dom";
+import finland from "./images/finland.jpg";
+import switzerland from "./images/switzerland.jpg";
+import norway from "./images/norway.jpg";
+import "./App.css";
+import Navbar from "./Navbar";
+import PlaceList from "./PlaceList";
+import PlaceDetails from "./PlaceDetails";
 
-class App extends Component{
+class App extends Component {
   static defaultProps = {
-    dogs: [
+    places: [
       {
-        name: "Whiskey",
+        name: "finland",
         age: 5,
-        src: whiskey,
+        src: finland,
         facts: [
           "Whiskey loves eating popcorn.",
           "Whiskey is a terrible guard dog.",
-          "Whiskey wants to cuddle with you!"
-        ]
+          "Whiskey wants to cuddle with you!",
+        ],
       },
       {
-        name: "Hazel",
+        name: "switzerland",
         age: 3,
-        src: hazel,
+        src: switzerland,
         facts: [
           "Hazel has soooo much energy!",
           "Hazel is highly intelligent.",
-          "Hazel loves people more than dogs."
-        ]
+          "Hazel loves people more than dogs.",
+        ],
       },
       {
-        name: "Tubby",
+        name: "norway",
         age: 4,
-        src: tubby,
+        src: norway,
         facts: [
           "Tubby is not the brightest dog",
           "Tubby does not like walks or exercise.",
-          "Tubby loves eating food."
-        ]
-      }
-    ]
-  }
-  render(){
+          "Tubby loves eating food.",
+        ],
+      },
+    ],
+  };
+  render() {
     return (
       <div className="App">
         <Navbar />
-        <h1 className='display-1'>Hello</h1>
-        </div>
+        <Routes>
+          <Route
+            exact="true"
+            path="/places"
+            element={<PlaceList places={this.props.places} />}
+          />
+          <Route
+            exact="true"
+            path="/places/:name"
+            element={<PlaceDetails eachPlace={this.props.places} />}
+          />
+        </Routes>
+      </div>
     );
   }
-  
 }
 
 export default App;

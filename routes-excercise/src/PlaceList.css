@@ -1,0 +1,14 @@
+
+
+.place img{
+    width: 75%;
+    border-radius: 50%;
+    opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.place img:hover{
+    cursor: pointer;
+    opacity: .85;
+}
