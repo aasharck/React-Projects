@@ -12,8 +12,8 @@ class App extends Component {
   static defaultProps = {
     places: [
       {
-        name: "finland",
-        age: 5,
+        name: "Finland",
+        by: "John",
         src: finland,
         facts: [
           "Whiskey loves eating popcorn.",
@@ -22,8 +22,8 @@ class App extends Component {
         ],
       },
       {
-        name: "switzerland",
-        age: 3,
+        name: "Switzerland",
+        by: "Felipe",
         src: switzerland,
         facts: [
           "Hazel has soooo much energy!",
@@ -32,8 +32,8 @@ class App extends Component {
         ],
       },
       {
-        name: "norway",
-        age: 4,
+        name: "Norway",
+        by: "Letty",
         src: norway,
         facts: [
           "Tubby is not the brightest dog",
@@ -46,7 +46,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navbar />
+        <Navbar places={this.props.places} />
+        <div className="container">
         <Routes>
           <Route
             exact="true"
@@ -59,6 +60,7 @@ class App extends Component {
             element={<PlaceDetails eachPlace={this.props.places} />}
           />
         </Routes>
+        </div>
       </div>
     );
   }

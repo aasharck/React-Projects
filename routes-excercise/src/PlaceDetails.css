@@ -1,3 +1,7 @@
-.card{
+.place-details img{
+    width: 75%;
+}
+
+.place-details-card{
     margin: auto;
 }
