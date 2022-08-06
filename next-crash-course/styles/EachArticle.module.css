@@ -1,0 +1,10 @@
+.container{
+    padding: 0 12rem;
+}
+
+@media (max-width: 600px) {
+    .container{
+        padding: 0 1rem;
+    }
+  }
+    
